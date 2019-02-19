@@ -21,7 +21,7 @@ public class CourseController {
 
 
       @GetMapping("/")
-      public ModelAndView wc(){
+      public ModelAndView welcomePage(){
 
          return new ModelAndView("wc");
       }
