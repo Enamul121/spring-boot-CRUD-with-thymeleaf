@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="fragments/header :: head"> </th:block>
+</head>
+<body>
+<div class="container">
+    <br>
+    <nav>  <th:block th:replace="fragments/nav :: nav"></th:block>   </nav>
+    <br>
+    <h1>
+        WELCOME TO COURSE ENTRY FORM ::::::::::::::::::::::::::::::::
+    </h1>
+
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+    <form  th:object="${courseForm}"  method="post" th:action="@{/addCourse}"  cssClass="form" >
+
+        <input type="hidden" th:field="*{c_id}"/>
+
+
+        <div class="form-group">
+            <label>Title</label>
+            <input th:field="*{courseName}" type="text" class="form-control"  />
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <input type="text" class="form-control" th:field="*{categories}" />
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+    <br>
+
+    <footer>
+
+        <th:block th:include="fragments/footer :: footer"></th:block>
+
+    </footer>
+
+</div>
+</body>
+</html>

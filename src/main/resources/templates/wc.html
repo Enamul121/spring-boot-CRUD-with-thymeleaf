@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="fragments/header :: head"> </th:block>
+</head>
+<body>
+<div class="container">
+    <br>
+
+    <nav>  <th:block th:replace="fragments/nav :: nav"></th:block>   </nav>
+
+<br>
+
+    <h1>
+
+        WELCOME TO Spring Boot THYMELEAF CRUD
+    </h1>
+    <h4>To see List  <a th:href="@{/list}">Click Here</a></h4>
+    <br>
+
+
+
+
+    <footer>
+<th:block th:include="fragments/footer :: footer"></th:block>
+    </footer>
+
+</div>
+</body>
+</html>
